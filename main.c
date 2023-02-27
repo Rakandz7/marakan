@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    printf("uyf\n");
+    printf("fils de pute\n");
     return 0;
 }
