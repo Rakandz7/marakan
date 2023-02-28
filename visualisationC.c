@@ -15,7 +15,7 @@ void visualisationC(float puissance_f){
     }
     else {
         // Fichier n'exsite pas
-        FILE *verrouData= NULL;
+        FILE* verrouData= NULL;
         verrouData = fopen(".verrouData", "w");
         if (verrouData == NULL) {
             fprintf(stderr, "le fichier .verrouData n'a pas pu s'ouvrir\n");
