@@ -1,5 +1,10 @@
 #include "visualisationT.h"
 
+/***
+ * @function Cette fonction permet de d'afficher sur l'interface IHM la température interne et externe via le fichier data.txt
+ * @param myTemp struct -> float & float | ce paramètre correspond aux température interne et externe
+ * @return void
+ */
 void visualisationT(temp_t myTemp){
    // Verification de l'existance du fichier .verrouData
    if(access(".verrouData", F_OK) != -1){

@@ -109,7 +109,7 @@ float testVisualisationT(){
 	// Variables declaration
 	FILE* pf;
 
-	temp_t temperature[2];
+	temp_t temperature[3];
 	temperature[0].exterieure=2.0;
 	temperature[0].interieure=9.0;
 	temperature[1].exterieure=12.0;
@@ -304,7 +304,6 @@ float testVisualisationC(){
 				test_display++;
 			}
 		}
-
 	}
 	if(test_display==2){
 		
@@ -317,7 +316,7 @@ float testVisualisationC(){
 		
 		
 		#ifdef DISPLAY_DEBUG
-		printf("test visualisationT_display failed [%d/2 succeeded]  \n",test_display);
+		printf("test visualisationC_display failed [%d/2 succeeded]  \n",test_display);
 		#endif
 	}
 

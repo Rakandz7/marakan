@@ -1,9 +1,12 @@
 #include <unistd.h>
 #include <stdio.h>
-#include <math.h>
 #include "visualisationC.h"
 
-
+/***
+ * @function Cette fonction permet de d'afficher sur l'interface IHM si le chauffage est sur On ou Off via le fichier data.txt
+ * @param puissance_f float | ce paramètre correspond au % de puissance du chaffage utilisé
+ * @return void
+ */
 void visualisationC(float puissance_f){
    // Verification de l'existance du fichier .verrouData
     if (access (".verrouData",F_OK)!= -1){
@@ -32,8 +35,8 @@ void visualisationC(float puissance_f){
             exit(0);
         }
         data = fopen("data.txt","w");
-        fprintf(data, "%f", tempExt);
-        fprintf(data, "%f", tempInt);
+        fprintf(data, "%f\n", tempExt);
+        fprintf(data, "%f\n", tempInt);
         if(puissance_f == 0){
             fprintf(data, "false");
             fclose(data);
