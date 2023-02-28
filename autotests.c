@@ -6,7 +6,7 @@
 #include "visualisationC.h"
 #include "regulation.h"
 
-//#define DISPLAY_DEBUG
+#define DISPLAY_DEBUG
 
 float testConsigne(){
 	

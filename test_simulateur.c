@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "simulateur.h"
+#include "autotests.h"
 
 int main(){
 
@@ -14,5 +15,6 @@ int main(){
 		temperature=simCalc(puissance,monSimulateur_ps); // simulation de l'environnement
 	}
 	simDestruct(monSimulateur_ps); // destruction de simulateur
+
 	return EXIT_SUCCESS;
 }
