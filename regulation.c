@@ -13,21 +13,24 @@ float regulationTest(int regul, float consigne, float* tabT, int nT){
     float proportionnel;
     float integral;
     float derive;
-    if (regul == 1){
-        if (consigne > tabT[nT-1]){
+    if (consigne > tabT[nT-1]){
+        if (regul == 1){
             cmd = 40.0;
         }
-        else{
-            cmd = 0.0;
+        if (regul == 2){
+            proportionnel = consigne - tabT[nT - 1];
+            for (int i = 0; i < nT; ++i){
+                integral += consigne - tabT[i];
+            }
+            derive = (consigne - tabT[nT - 1]) - (consigne - tabT[nT - 2]);
+            cmd = proportionnel*KP + integral*KI + derive*KD;
+            if (cmd > 100.0){
+                cmd = 100.0;
+            }
         }
     }
-    if (regul == 2){
-        proportionnel = consigne - tabT[nT - 1];
-        for (int i = 0; i < nT; ++i){
-            integral += consigne - tabT[i];
-        }
-        derive = (consigne - tabT[nT - 1]) - (consigne - tabT[nT - 2]);
-        cmd = proportionnel*KP + integral*KI + derive*KD;
+    else{
+        cmd = 0.0;
     }
     return cmd;
 }

@@ -9,7 +9,7 @@
  */
 void visualisationC(float puissance_f){
    // Verification de l'existance du fichier .verrouData
-    if (access (".verrouData",F_OK)!= -1){
+    if (access(".verrouData",F_OK) != -1){
         // Fichier existe
         return;
     }
