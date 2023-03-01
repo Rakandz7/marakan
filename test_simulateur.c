@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include "simulateur.h"
 #include "consigne.h"
@@ -46,4 +46,4 @@ int main(){
     free(tabT);
 	simDestruct(monSimulateur); // destruction de simulateur
 	return EXIT_SUCCESS;
-}
+}*/
