@@ -53,10 +53,7 @@ void visualisationC(float puissance_f){
         }
         fclose(verrouData);
         int error = remove(".verrouData");
-        if (error == 0){
-            printf(".verrouData remove successfully\n");
-        }
-        else{
+        if (error != 0){
             printf("unable to remove .verrouData\n");
         }
     }

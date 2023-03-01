@@ -30,10 +30,7 @@ float consigne(float thermostatPrec_f){
        }
        fclose(verrouConsigne);
        int error = remove(".verrouConsigne");
-       if (error == 0){
-           printf(".verrouConsigne remove successfully\n");
-       }
-       else{
+       if (error != 0){
            printf("unable to remove .verrouConsigne\n");
        }
    }

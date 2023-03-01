@@ -43,10 +43,7 @@ void visualisationT(temp_t myTemp){
         }
        fclose(verrouData);
        int error = remove(".verrouData");
-       if (error == 0){
-           printf(".verrouData remove successfully\n");
-       }
-       else{
+       if (error != 0){
            printf("unable to remove .verrouData\n");
        }
    }

@@ -27,6 +27,9 @@ float regulationTest(int regul, float consigne, float* tabT, int nT){
             if (cmd > 100.0){
                 cmd = 100.0;
             }
+            if (cmd < 0.0){
+                cmd = 0.0;
+            }
         }
     }
     else{
