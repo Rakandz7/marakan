@@ -26,7 +26,7 @@ float regulationTest(int regul, float consigne, float* tabT, int nT){
         for (int i = 0; i < nT; ++i){
             integral += consigne - tabT[i];
         }
-        derive = (tabT[nT-1] - tabT[nT-2]) - (tabT[nT - 2] - tabT[nT - 3]);
+        derive = (consigne - tabT[nT - 1]) - (consigne - tabT[nT - 2]);
 
         printf("\nproportionnel : %f\n", proportionnel);
         printf("integral : %f\n", integral);
