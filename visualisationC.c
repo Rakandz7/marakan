@@ -31,19 +31,25 @@ void visualisationC(float puissance_f){
             fclose(data);
         }
         else{
-            fprintf(stderr, "Le fichier data.txt ne s'est pas ouvert\n");
+            fprintf(stderr, "Le fichier data.txt ne s'est pas ouvert (visualisation C)\n");
             exit(0);
         }
         data = fopen("data.txt","w");
-        fprintf(data, "%f\n", tempExt);
-        fprintf(data, "%f\n", tempInt);
-        if(puissance_f == 0){
-            fprintf(data, "false");
-            fclose(data);
+        if (data != NULL){
+            fprintf(data, "%f\n", tempExt);
+            fprintf(data, "%f\n", tempInt);
+            if(puissance_f == 0){
+                fprintf(data, "false");
+                fclose(data);
+            }
+            else {
+                fprintf(data, "true");
+                fclose(data);
+            }
         }
-        else {
-            fprintf(data, "true");
-            fclose(data);
+        else{
+            fprintf(stderr, "Le fichier data.txt ne s'est pas ouvert (visualisation C)\n");
+            exit(0);
         }
         remove(".verrouData");
     }

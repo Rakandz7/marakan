@@ -31,7 +31,7 @@ void visualisationT(temp_t myTemp){
             fclose(data);
         }
         else{
-            fprintf(stderr, "Le fichier data.txt ne s'est pas ouvert\n");
+            fprintf(stderr, "Le fichier data.txt ne s'est pas ouvert (visualisation C)\n");
             exit(0);
         }
         data = fopen("data.txt", "w");
