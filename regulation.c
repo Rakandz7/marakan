@@ -23,12 +23,14 @@ float regulationTest(int regul, float consigne, float* tabT, int nT){
     }
     if (regul == 2){
         proportionnel = consigne - tabT[nT - 1];
-        for (int j = 0; j < nT; ++j){
-            integral += consigne - tabT[j];
+        for (int i = 0; i < nT; ++i){
+            integral += consigne - tabT[i];
         }
-        for (int j = 0; j < (nT - 1); ++j){
-            derive += tabT[j + 1] - tabT[j];
-        }
+        derive = (tabT[nT-1] - tabT[nT-2]) - (tabT[nT - 2] - tabT[nT - 3]);
+
+        printf("\nproportionnel : %f\n", proportionnel);
+        printf("integral : %f\n", integral);
+        printf("derive : %f\n", derive);
         cmd = proportionnel*KP + integral*KI + derive*KD;
     }
     return cmd;
