@@ -28,6 +28,7 @@ float consigne(float thermostatPrec_f){
        else{
            printf("Impossible d'ouvrir consigne.txt\n");
        }
+       fclose(verrouConsigne);
        int error = remove(".verrouConsigne");
        if (error == 0){
            printf(".verrouConsigne remove successfully\n");
