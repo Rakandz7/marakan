@@ -17,7 +17,7 @@ float consigne(float thermostatPrec_f){
        FILE* verrouConsigne = NULL;
        verrouConsigne = fopen(".verrouConsigne", "w");
        if (verrouConsigne == NULL){
-           printf("Le fichier .verrouConsigne n'as pas pu être créer");
+           printf("Le fichier .verrouConsigne n'as pas pu être créer\n");
        }
        FILE* consigne = NULL;
        consigne = fopen("consigne.txt", "r");
@@ -26,9 +26,15 @@ float consigne(float thermostatPrec_f){
            fclose(consigne);
        }
        else{
-           printf("Impossible d'ouvrir consigne.txt");
+           printf("Impossible d'ouvrir consigne.txt\n");
        }
-       remove(".verrouConsigne");
+       int error = remove(".verrouConsigne");
+       if (error == 0){
+           printf(".verrouConsigne remove successfully\n");
+       }
+       else{
+           printf("unable to remove .verrouConsigne\n");
+       }
    }
    return thermostat_f; // retourne la nouvelle consigne
 }

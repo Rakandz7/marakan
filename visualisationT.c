@@ -41,6 +41,12 @@ void visualisationT(temp_t myTemp){
             fprintf(data, "%s\n", ioChauff); // on écrit la troisième ligne
             fclose(data);
         }
-        remove(".verrouData");
+       int error = remove(".verrouData");
+       if (error == 0){
+           printf(".verrouData remove successfully\n");
+       }
+       else{
+           printf("unable to remove .verrouData\n");
+       }
    }
 }

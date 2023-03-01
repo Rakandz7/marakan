@@ -51,6 +51,12 @@ void visualisationC(float puissance_f){
             fprintf(stderr, "Le fichier data.txt ne s'est pas ouvert (visualisation C)\n");
             exit(0);
         }
-        remove(".verrouData");
+        int error = remove(".verrouData");
+        if (error == 0){
+            printf(".verrouData remove successfully\n");
+        }
+        else{
+            printf("unable to remove .verrouData\n");
+        }
     }
 }
