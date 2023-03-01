@@ -21,9 +21,9 @@ void visualisationT(temp_t myTemp){
         }
         FILE* data = NULL;
         data = fopen("data.txt", "r");
-        float tempExt; // température intérieur
-        float tempInt; // température extérieur
-        char ioChauff[10]; // Chaine vide pour la l'allumage du chauffage true ou false
+        float tempExt; // température extérieur
+        float tempInt; // température intérieur
+        char ioChauff[10]; // Chaine vide pour  l'allumage du chauffage true ou false
         if (data != NULL){
             fscanf(data, "%f", &tempExt); // on lit la première ligne
             fscanf(data, "%f", &tempInt); // on lit la deuxième ligne
