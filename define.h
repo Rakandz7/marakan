@@ -3,9 +3,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define KP 60
-#define KI 0.2
-#define KD 62
+#define KP 4.8
+#define KI 0.96
+#define KD 36
 
 
 typedef struct {
