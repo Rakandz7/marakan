@@ -8,6 +8,7 @@ import numpy as np
 import os
 from time import strftime
 from time import gmtime
+import sys
 
 SIMULATION_DELAY = 500  # Delay between two simulation ticks (1000=1s)
 REAL_DELAY_VALUE = 1250  # Real delay between 2 ticks (seconds)
@@ -117,7 +118,7 @@ class myapp:
         crow += 1
         # exit button
         tk.Label(self.lpanel, text="Press to:").grid(column=0, row=crow)
-        Button(self.lpanel, text="Exit", command=quit).grid(column=1, row=crow)
+        Button(self.lpanel, text="Exit", command=sys.exit).grid(column=1, row=crow)
 
     def cb_selection(self):
         if self.cbvar.get() == 1:

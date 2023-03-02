@@ -20,8 +20,7 @@ int main(){
     float cons = 19.0;
     int tmp;
 	struct simParam_s*  monSimulateur = simConstruct(temperature); // creation du simulateur, puissance intialisé
-	while(cons >= 5.0){
-
+	while(cons != 5.0){
         temperature = simCalc(cmd,monSimulateur);
         if (nT == 99){
             tmp = 0;
