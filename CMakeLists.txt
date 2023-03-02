@@ -3,4 +3,4 @@ project(marakan C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(marakan consigne.c regulation.c simulateur.c test_simulateur.c visualisationC.c visualisationT.c autotests.c autotests.h main.c ftd2xx/ftd2xx.h)
+add_executable(marakan consigne.c regulation.c simulateur.c test_simulateur.c visualisationC.c visualisationT.c autotests.c autotests.h main.c releve.c releve.h commande.c commande.h)
