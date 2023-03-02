@@ -39,11 +39,11 @@ void visualisationC(float puissance_f){
             fprintf(data, "%f\n", tempExt);
             fprintf(data, "%f\n", tempInt);
             if(puissance_f == 0){
-                fprintf(data, "false");
+                fprintf(data, "False");
                 fclose(data);
             }
             else {
-                fprintf(data, "true");
+                fprintf(data, "True");
                 fclose(data);
             }
         }

@@ -21,17 +21,16 @@ void visualisationT(temp_t myTemp){
         }
         FILE* data = NULL;
         data = fopen("data.txt", "r");
-        float tempExt; // température extérieur
-        float tempInt; // température intérieur
+        float tmp;
         char ioChauff[10]; // Chaine vide pour  l'allumage du chauffage true ou false
         if (data != NULL){
-            fscanf(data, "%f", &tempExt); // on lit la première ligne
-            fscanf(data, "%f", &tempInt); // on lit la deuxième ligne
+            fscanf(data, "%f", &tmp); // on lit la première ligne
+            fscanf(data, "%f", &tmp); // on lit la deuxième ligne
             fscanf(data, "%s", ioChauff); // on lit la trosième ligne
             fclose(data);
         }
         else{
-            fprintf(stderr, "Le fichier data.txt ne s'est pas ouvert (visualisation C)\n");
+            fprintf(stderr, "Le fichier data.txt ne s'est pas ouvert (visualisation T)\n");
             exit(0);
         }
         data = fopen("data.txt", "w");
