@@ -35,4 +35,4 @@ cleantest:
 	rm -f *.o executable_test
 
 cleanexe:
-	rm -f $.o executable
+	rm -f *.o executable
