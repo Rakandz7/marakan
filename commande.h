@@ -1,4 +1,0 @@
-#ifndef MARAKAN_COMMANDE_H
-#define MARAKAN_COMMANDE_H
-
-#endif

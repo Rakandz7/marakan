@@ -1,10 +1,7 @@
-all: executable_usb
+all: executable
 
-executable_usb: autotests.o consigne.o regulation.o simulateur.o test_usb.o visualisationC.o visualisationT.o releve.o commande.o
-	gcc autotests.o consigne.o regulation.o simulateur.o test_usb.o visualisationC.o visualisationT.o releve.o commande.o ftd2xx.lib -o executable_usb
-
-executable: autotests.o consigne.o regulation.o simulateur.o test_simulateur.o visualisationC.o visualisationT.o releve.o commande.o
-	gcc autotests.o consigne.o regulation.o simulateur.o test_simulateur.o visualisationC.o visualisationT.o releve.o commande.o -o executable
+executable: autotests.o consigne.o regulation.o simulateur.o test_simulateur.o visualisationC.o visualisationT.o
+	gcc autotests.o consigne.o regulation.o simulateur.o test_simulateur.o visualisationC.o visualisationT.o -o executable
 
 test_usb.o: test_usb.c define.h
 	gcc -Wall -c test_usb.c -o test_usb.o
@@ -30,12 +27,8 @@ visualisationC.o: visualisationC.c visualisationC.h
 visualisationT.o: visualisationT.c visualisationT.h
 	gcc -Wall -c visualisationT.c -o visualisationT.o
 
-releve.o: releve.c releve.h
-	gcc -Wall -c releve.c -o releve.o
-
-commande.o: commande.c commande.h
-	gcc -Wall -c commande.c -o commande.o
-
 cleanw:
 	del *.o *.exe
 
+clean:
+	rm -f *.o

@@ -1,5 +1,6 @@
 #include "consigne.h"
 
+
 /***
  * @function Cette fonction correspond à la lecture de la consigne de l'utilisateur pour la température souhaitée via le fichier consigne.txt
  * @param thermostatPrec_f float | ce paramètre correspond à l'ancienne consigne de l'utilisateur
