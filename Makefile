@@ -1,10 +1,11 @@
-all: executable
-
 executable: autotests.o consigne.o regulation.o simulateur.o test_simulateur.o visualisationC.o visualisationT.o
 	gcc autotests.o consigne.o regulation.o simulateur.o test_simulateur.o visualisationC.o visualisationT.o -o executable
 
-test_usb.o: test_usb.c define.h
-	gcc -Wall -c test_usb.c -o test_usb.o
+executable_test: autotests.o consigne.o regulation.o simulateur.o main.o visualisationC.o visualisationT.o
+	gcc autotests.o consigne.o regulation.o simulateur.o main.o visualisationC.o visualisationT.o -o executable_test
+
+main.o: main.c define.h
+	gcc -Wall -c main.c -o main.o
 
 autotests.o: autotests.c autotests.h
 	gcc -Wall -c autotests.c -o autotests.o
@@ -30,5 +31,8 @@ visualisationT.o: visualisationT.c visualisationT.h
 cleanw:
 	del *.o *.exe
 
-clean:
-	rm -f *.o
+cleantest:
+	rm -f *.o executable_test
+
+cleanexe:
+	rm -f $.o executable
